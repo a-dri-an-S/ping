@@ -1,3 +1,5 @@
+import "../styles/PingSubmit.css";
+
 const PingSubmit = () => {
     return (
         <section className="ping-submit-section">
@@ -5,7 +7,7 @@ const PingSubmit = () => {
                 <h2 className="ping-submit-header">
                     We are launching <span className="ping-submit-header-bold">soon!</span>
                 </h2>
-                <p className="ping-submit-info">
+                <p className="ping-submit-tag">
                     Subscriber and get notified
                 </p>
             </div>

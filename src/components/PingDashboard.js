@@ -1,4 +1,5 @@
 import Dashboard from "../assets/dashboard.png";
+import "../styles/PingDashboard.css";
 
 const PingDashboard = () => {
     return (

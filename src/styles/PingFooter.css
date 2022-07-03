@@ -1,0 +1,21 @@
+.ping-footer-socials-btn {
+    margin: 20px;
+    border: 1px solid var(--pale-blue);
+    background-color: var(--white);
+    border-radius: 25px;
+    padding: 10px;
+    width: 50px;
+    height: 50px;
+}
+
+.icon {
+    color: var(--blue);
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ping-footer-copyright {
+    color: var(--gray);
+}
