@@ -5,13 +5,13 @@ const PingFooter = () => {
         <footer className="ping-footer">
             <div className="ping-footer-socials">
                 <button className="ping-footer-socials-btn">
-                    <span class="icon icon-facebook"></span>
+                    <span className="icon icon-facebook"></span>
                 </button>
                 <button className="ping-footer-socials-btn">
-                    <span class="icon icon-twitter"></span>
+                    <span className="icon icon-twitter"></span>
                 </button>
                 <button className="ping-footer-socials-btn">
-                    <span class="icon icon-instagram"></span>
+                    <span className="icon icon-instagram"></span>
                 </button>
             </div>
             <p className="ping-footer-copyright">

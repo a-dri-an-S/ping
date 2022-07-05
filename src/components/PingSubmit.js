@@ -1,6 +1,21 @@
+import { useState } from "react";
 import "../styles/PingSubmit.css";
 
 const PingSubmit = () => {
+
+    const [email, setEmail] = useState("");
+    const [validEmail, setValidEmail] = useState(false);
+
+    const submitEmail = (e) => {
+        e.preventDefault();
+        const validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+        if (!email.match(validRegex)) {
+            return setValidEmail(true);
+        } else {
+            setEmail("");
+        }
+    }
+
     return (
         <section className="ping-submit-section">
             <div className="ping-submit-info">
@@ -11,15 +26,29 @@ const PingSubmit = () => {
                     Subscriber and get notified
                 </p>
             </div>
-            <div className="ping-submit-submit">
+            <form 
+                className="ping-submit-submit"
+                onSubmit={(e) => submitEmail(e)}
+
+            >
                 <input 
-                    className="ping-submit-input"
+                    className={validEmail ? "ping-submit-input invalid" : "ping-submit-input"}
                     type="text"
                     placeholder="Your email address..."
-                    for="ping-submit" 
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)} 
                 />
-                <button className="ping-submit-button">Notify Me</button>
-            </div>
+                {validEmail ? 
+                    <p className="ping-submit-invalid">Please provide a valid email address</p> : 
+                    null
+                }
+                <button                                     
+                    className="ping-submit-button"
+                    type="submit"
+                >
+                    Notify Me
+                </button>
+            </form>
         </section>
     );
 }
