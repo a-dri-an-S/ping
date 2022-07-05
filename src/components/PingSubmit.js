@@ -13,6 +13,7 @@ const PingSubmit = () => {
             return setValidEmail(true);
         } else {
             setEmail("");
+            return setValidEmail(false);
         }
     }
 
@@ -31,17 +32,19 @@ const PingSubmit = () => {
                 onSubmit={(e) => submitEmail(e)}
 
             >
-                <input 
-                    className={validEmail ? "ping-submit-input invalid" : "ping-submit-input"}
-                    type="text"
-                    placeholder="Your email address..."
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)} 
-                />
-                {validEmail ? 
-                    <p className="ping-submit-invalid">Please provide a valid email address</p> : 
-                    null
-                }
+                <div className="ping-submit-input-section">
+                    <input 
+                        className={validEmail ? "ping-submit-input invalid" : "ping-submit-input"}
+                        type="text"
+                        placeholder="Your email address..."
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)} 
+                    />
+                    {validEmail ? 
+                        <p className="ping-submit-invalid">Please provide a valid email address</p> : 
+                        null
+                    }
+                </div>
                 <button                                     
                     className="ping-submit-button"
                     type="submit"

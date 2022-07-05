@@ -5,13 +5,8 @@
 }
 
 .ping-footer-socials-btn {
-    margin: 0px 20px;
     border: 1px solid var(--pale-blue);
     background-color: var(--white);
-    border-radius: 25px;
-    padding: 10px;
-    width: 35px;
-    height: 35px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -26,8 +21,6 @@
 
 .icon {
     color: var(--blue);
-    font-size: 15px;
-    padding: 10px;
 }
 
 .icon:hover {
@@ -36,5 +29,37 @@
 
 .ping-footer-copyright {
     color: var(--gray);
-    font-size: 15px;
+}
+
+@media only screen and (max-width: 1399px) {
+    .ping-footer-socials-btn {
+        margin: 0px 20px;
+        border-radius: 25px;
+        padding: 10px;
+        width: 35px;
+        height: 35px;
+    }
+    .icon {
+        font-size: 15px;
+        padding: 10px;
+    }
+    .ping-footer-copyright {
+        font-size: 15px;
+    }
+}
+@media only screen and (min-width: 1400px) {
+    .ping-footer-socials-btn {
+        margin: 0px 10px 20px 10px;
+        border-radius: 25px;
+        padding: 15px;
+        width: 45px;
+        height: 45px;
+    }
+    .icon {
+        font-size: 18px;
+        padding: 15px;
+    }
+    .ping-footer-copyright {
+        font-size: 18px;
+    }
 }

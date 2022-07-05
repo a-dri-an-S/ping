@@ -1,4 +1,14 @@
 .ping-header-img {
-    width: 100px;
     height: auto;
+}
+
+@media only screen and (max-width: 1399px) {
+    .ping-header-img {
+        width: 100px;
+    }
+}
+@media only screen and (min-width: 1400px) {
+    .ping-header-img {
+        width: 100px;
+    }
 }
